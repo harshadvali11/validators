@@ -1,0 +1,19 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Displaying the Django Crispy form</h1>
+        <form method="POST" class='uniForm'>
+            {% csrf_token %}
+                {{form|crispy}}
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+</body>
+</html>
